@@ -61,10 +61,7 @@ point(x, y); places a point at (x, y)
 
 # **Variables**
 
-
 ## **Data Types - Primitives**
-
-
 
 *    int (an integer)
 *    float (a decimal number, or integer)
@@ -75,10 +72,7 @@ point(x, y); places a point at (x, y)
 *    boolean (true or false)
 *    color
 
-
 ## **Data Types - Composite**
-
-
 
 *   Array
 *   ArrayList
@@ -97,16 +91,13 @@ point(x, y); places a point at (x, y)
 *   TableRow
 *   XML
 
-
 ## **Assignment vs. Comparison**
 
 In algebra, is it perfectly reasonable to say that x = 5 and 5 = x. But in programming, the equals symbol isn’t saying that the two values are equal. Instead, it takes the right value and copies it into the left value. That means that saying 5 = x, is changing the value of the number five, which isn’t allowed by the computer.
 
-
 ## **Scope**
 
 Scope in programming is the idea that in whatever place a variable is declared it can’t be used outside of that area, also known as scope. For example, if we create a variable inside of our draw function, it will not be able to be used anywhere else. Not only this, but it will be destroyed after draw ends. Since draw is called repeatedly, it will just create a new variable every time.
-
 
 ## **Creating Variables**
 
@@ -118,58 +109,45 @@ Type Name, Name, Name;
 
 Type Name = Value;
 
-
 ## **Assigning Values**
 
 Assigning a value to a variable is usually done using the following format. However, we also can change the value of any variable by a certain factor.
 
 Name = Value;
 
-
 ## **Predefined Variables**
 
 Processing has some predefined variables that will update automatically as they change. 
 
-
-
-*   width (width of window)
+* 	width (width of window)
 *   height (height of window)
 *   mouseX (mouse position on x-axis)
 *   mouseY (mouse position on y-axis)
 *   frameRate (fps)
 
-
 # **If Statements**
 
-Checks if a condition true, and if it is, then executes specified code. Otherwise, it just skips the section.
-
+Checks if a condition is true, and if it is, then executes specified code. Otherwise, it just skips the section.
 
 ## **Structure**
 
-if (comparison)
-
+'''if (comparison) 
 {
-
-code
-
-}
-
+	code...
+}'''
 
 ## **Boolean Operators**
 
+Boolean Operators return a boolean with the input of two values
 
 # **Project Code**
 
-void setup() 
+Here is the code for our project:
 
-{ 
-
-size(800, 600);    
-
+'''void setup() { 
+	size(800, 600);   
 }
 
-void draw()
+void draw() {
 
-{
-
-}
+}'''

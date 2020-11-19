@@ -3,202 +3,215 @@
 <html>
   <head>
     <title>Test</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <style>
       html, body
       {
         padding: 0;
         margin: 0;
-      }
-
-      body
-      {
-        width:50%;  
-        margin: auto;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
       }
 
       h2 {
         margin: 0;
-        padding: 0em;
+        padding: 0.25em 0em;
+        font-weight: 500;
       }
 
       h3 {
         margin: 0;
-        padding: 0em;
+        padding: 0.25em 0em;
+        font-weight: 500;
       }
 
       p {
         margin: 0;
         padding: 0;
       }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 1em;
+        width: calc(25% - 2em);
+        position: fixed;
+        background-color: gray;
+        height: 100%;
+        display:block;
+      }
+
+      li {
+        display: block;
+      }
+      
+      a {
+        padding: 0.5em;
+        text-decoration: none;
+        color: black;
+        display: block;
+        margin
+      }
+
+      a:hover, a:focus {
+        background-color: darkgray;
+      }
+
+      .text {
+        width: calc(75% - 2em);
+        float: right;
+        padding: 1em;
+      }
+
+      .code {
+        width:calc(100% - 2em);
+        padding: 1em;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color:lightgray;
+        line-height:1.2em;
+      }
     </style>
   </head>
   <body>
 <ul>
-<li>Control Flow</li>
-<li>Pseudo-Code</li>
-<li>Skeleton Code</li>
-<li>Functions</li>
-<li style="margin-left:20px;">Predefined Functions</li>
-<li>Variables</li>
-<li style="margin-left:20px;">Data Types - Primitives</li>
-<li style="margin-left:20px;">Data Types - Composite</li>
-<li style="margin-left:20px;">Assignment vs Comparison</li>
-<li style="margin-left:20px;">Scope</li>
-<li style="margin-left:20px;">Creating Variables</li>
-<li style="margin-left:20px;">Assigning Values</li>
-<li style="margin-left:20px;">Predefined Variables</li>
-<li>If Statements</li>
-<li style="margin-left:20px;">Structure</li>
-<li style="margin-left:20px;">Boolean Operators</li>
-<li>Project Code</li>
+<li><a href="#ControlFlow"> Control Flow</a></li> 
+<li><a href="#Pseudo-Code"> Pseudo-Code</a></li> 
+<li><a href="#SkeletonCode"> Skeleton Code</a></li> 
+<li><a href="#Functions"> Functions</a></li> 
+<li style="margin-left:20px;"><a href="#PredefinedFunctions"> Predefined Functions</a></li>
+<li><a href="#Variables"> Variables</a></li> 
+<li style="margin-left:20px;"><a href="#DataTypes-Primitives"> Data Types - Primitives</a></li>
+<li style="margin-left:20px;"><a href="#DataTypes-Composite"> Data Types - Composite</a></li>
+<li style="margin-left:20px;"><a href="#AssignmentvsComparison"> Assignment vs Comparison</a></li>
+<li style="margin-left:20px;"><a href="#Scope"> Scope</a></li>
+<li style="margin-left:20px;"><a href="#CreatingVariables"> Creating Variables</a></li>
+<li style="margin-left:20px;"><a href="#AssigningValues"> Assigning Values</a></li>
+<li style="margin-left:20px;"><a href="#PredefinedVariables"> Predefined Variables</a></li>
+<li><a href="#IfStatements"> If Statements</a></li> 
+<li style="margin-left:20px;"><a href="#Structure"> Structure</a></li>
+<li style="margin-left:20px;"><a href="#BooleanOperators"> Boolean Operators</a></li>
+<li><a href="#ProjectCode"> Project Code</a></li> 
 </ul>
-<h2><p><strong>Control Flow</strong></h2>
-<p>A program reads from left to right, then top to bottom (like a book). This is known as control flow. When the program is run a set of instructions is created to determine how it is run. In processing, it is guaranteed that only one instruction will be run at a time. The order may change during runtime due to if statements, loops, or any other runtime decisions. <br>
-<br>
-<br>
-<h2><p><strong>Pseudo-Code</strong></h2>
-<p>Pseudo-Code is instructions that help us to understand what our code does. When the program runs, pseudo-code is just ignored. To type pseudo-code in processing just type two slashes. <br>
-<br>
-// The rest of the line is ignored by the compiler<br>
-<br>
-/* <br>
-<br>
-These are generally referred to as comments, To type multiline comments, use a slash then an asterisk, put your message, and then put an asterisk then slash. Anything between them will be ignored.<br>
-<br>
-*/<br>
-<br>
-<br>
-<h2><p><strong>Skeleton Code</strong></h2>
-<p>Every processing program will have this template. The code inside of setup will be run once at the beginning of the program and draw will be run repeatedly after. <br>
-<br>
-void setup()<br>
-<br>
-{<br>
-<br>
-}<br>
-<br>
-void draw()<br>
-<br>
-{<br>
-<br>
-}<br>
-<br>
-<br>
-<h2><p><strong>Functions</strong></h2>
-<p>Functions are tools that allow us to assign a name to a chunk of code. They don’t work this way internally (most of the time), but for all intents and purposes, we can think of them this way. Processing gives us many predefined functions so that we don’t have to worry about the code that is executed when we call them.<br>
-<br>
-<br>
-<h3><p><strong>Predefined Functions</strong></h3><p>size(width, height); Set the width and height of the window<br>
-<br>
-background(r, g, b); draws a background with that color<br>
-<br>
-fill(r, g, b); sets the next fill color for the next shapes<br>
-<br>
-stroke(r, g, b); sets the next outline color for the next shapes<br>
-<br>
-strokeWeight(thickness); sets the thickness for the stroke<br>
-<br>
-rect(x, y, w, h); draws  a rectangle with top-left point and (x, y) with width w and height h<br>
-<br>
-ellipse(x, y, w, h); draws oval with center at (x, y) and width and height of w and h<br>
-<br>
-triangle(x1, y1, x2, y2, x3, y3); connects (x1, y1); (x2, y2); and (x3, y3) into triangle<br>
-<br>
-point(x, y); places a point at (x, y)<br>
-<br>
-<br>
-<h2><p><strong>Variables</strong></h2>
-<p><br>
-<h3><p><strong>Data Types - Primitives</strong></h3><p><br>
-<br>
-*    int (an integer)<br>
-*    float (a decimal number, or integer)<br>
-*    double (a decimal number, or integer, but it can be bigger)<br>
-*    long (an integer, but it can be bigger)<br>
-*    char (a letter or a character)<br>
-*    byte (a numerical value of 8 bits, not very useful)<br>
-*    boolean (true or false)<br>
-*    color<br>
-<br>
-<br>
-<h3><p><strong>Data Types - Composite</strong></h3><p><br>
-<br>
-*   Array<br>
-*   ArrayList<br>
-*   FloatDict<br>
-*   FloatList<br>
-*   HashMap<br>
-*   IntDict<br>
-*   IntList<br>
-*   JSONArray<br>
-*   JSONObject<br>
-*   Object<br>
-*   String<br>
-*   StringDict<br>
-*   StringList<br>
-*   Table<br>
-*   TableRow<br>
-*   XML<br>
-<br>
-<br>
-<h3><p><strong>Assignment vs. Comparison</strong></h3><p>In algebra, is it perfectly reasonable to say that x = 5 and 5 = x. But in programming, the equals symbol isn’t saying that the two values are equal. Instead, it takes the right value and copies it into the left value. That means that saying 5 = x, is changing the value of the number five, which isn’t allowed by the computer.<br>
-<br>
-<br>
-<h3><p><strong>Scope</strong></h3><p>Scope in programming is the idea that in whatever place a variable is declared it can’t be used outside of that area, also known as scope. For example, if we create a variable inside of our draw function, it will not be able to be used anywhere else. Not only this, but it will be destroyed after draw ends. Since draw is called repeatedly, it will just create a new variable every time.<br>
-<br>
-<br>
-<h3><p><strong>Creating Variables</strong></h3><p>There are many ways to create a variable or multiple variables. You don’t need to put in a value right away. You can also create multiple variables by listing them with commas. You may use any combination of these:<br>
-<br>
-Type Name;<br>
-<br>
-Type Name, Name, Name;<br>
-<br>
-Type Name = Value;<br>
-<br>
-<br>
-<h3><p><strong>Assigning Values</strong></h3><p>Assigning a value to a variable is usually done using the following format. However, we also can change the value of any variable by a certain factor.<br>
-<br>
-Name = Value;<br>
-<br>
-<br>
-<h3><p><strong>Predefined Variables</strong></h3><p>Processing has some predefined variables that will update automatically as they change. <br>
-<br>
-<br>
-<br>
-*   width (width of window)<br>
-*   height (height of window)<br>
-*   mouseX (mouse position on x-axis)<br>
-*   mouseY (mouse position on y-axis)<br>
-*   frameRate (fps)<br>
-<br>
-<br>
-<h2><p><strong>If Statements</strong></h2>
-<p>Checks if a condition true, and if it is, then executes specified code. Otherwise, it just skips the section.<br>
-<br>
-<br>
-<h3><p><strong>Structure</strong></h3><p>if (comparison)<br>
-<br>
-{<br>
-<br>
-code<br>
-<br>
-}<br>
-<br>
-<br>
-<h3><p><strong>Boolean Operators</strong></h3><p><br>
-<h2><p><strong>Project Code</strong></h2>
-<p>void setup() <br>
-<br>
-{ <br>
-<br>
-size(800, 600);    <br>
-<br>
-}<br>
-<br>
-void draw()<br>
-<br>
-{<br>
-<br>
-}
+<div class="text"><h2 id="ControlFlow"><strong>Control Flow</strong></h2>A program reads from left to right, then top to bottom (like a book). This is known as control flow. When the program is run a set of instructions is created to determine how it is run. In processing, it is guaranteed that only one instruction will be run at a time. The order may change during runtime due to if statements, loops, or any other runtime decisions. <br/>
+<br/>
+<br/>
+<h2 id="Pseudo-Code"><strong>Pseudo-Code</strong></h2>Pseudo-Code is instructions that help us to understand what our code does. When the program runs, pseudo-code is just ignored. To type pseudo-code in processing just type two slashes. <br/>
+<br/>
+// The rest of the line is ignored by the compiler<br/>
+<br/>
+/* <br/>
+<br/>
+These are generally referred to as comments, To type multiline comments, use a slash then an asterisk, put your message, and then put an asterisk then slash. Anything between them will be ignored.<br/>
+<br/>
+*/<br/>
+<br/>
+<br/>
+<h2 id="SkeletonCode"><strong>Skeleton Code</strong></h2>Every processing program will have this template. The code inside of setup will be run once at the beginning of the program and draw will be run repeatedly after. <br/>
+<br/>
+void setup()<br/>
+<br/>
+{<br/>
+<br/>
+}<br/>
+<br/>
+void draw()<br/>
+<br/>
+{<br/>
+<br/>
+}<br/>
+<br/>
+<br/>
+<h2 id="Functions"><strong>Functions</strong></h2>Functions are tools that allow us to assign a name to a chunk of code. They don’t work this way internally (most of the time), but for all intents and purposes, we can think of them this way. Processing gives us many predefined functions so that we don’t have to worry about the code that is executed when we call them.<br/>
+<br/>
+<br/>
+<h3 id="PredefinedFunctions"><strong>Predefined Functions</strong></h3>size(width, height); Set the width and height of the window<br/>
+<br/>
+background(r, g, b); draws a background with that color<br/>
+<br/>
+fill(r, g, b); sets the next fill color for the next shapes<br/>
+<br/>
+stroke(r, g, b); sets the next outline color for the next shapes<br/>
+<br/>
+strokeWeight(thickness); sets the thickness for the stroke<br/>
+<br/>
+rect(x, y, w, h); draws  a rectangle with top-left point and (x, y) with width w and height h<br/>
+<br/>
+ellipse(x, y, w, h); draws oval with center at (x, y) and width and height of w and h<br/>
+<br/>
+triangle(x1, y1, x2, y2, x3, y3); connects (x1, y1); (x2, y2); and (x3, y3) into triangle<br/>
+<br/>
+point(x, y); places a point at (x, y)<br/>
+<br/>
+<br/>
+<h2 id="Variables"><strong>Variables</strong></h2><h3 id="DataTypes-Primitives"><strong>Data Types - Primitives</strong></h3>*    int (an integer)<br/>
+*    float (a decimal number, or integer)<br/>
+*    double (a decimal number, or integer, but it can be bigger)<br/>
+*    long (an integer, but it can be bigger)<br/>
+*    char (a letter or a character)<br/>
+*    byte (a numerical value of 8 bits, not very useful)<br/>
+*    boolean (true or false)<br/>
+*    color<br/>
+<br/>
+<h3 id="DataTypes-Composite"><strong>Data Types - Composite</strong></h3>*   Array<br/>
+*   ArrayList<br/>
+*   FloatDict<br/>
+*   FloatList<br/>
+*   HashMap<br/>
+*   IntDict<br/>
+*   IntList<br/>
+*   JSONArray<br/>
+*   JSONObject<br/>
+*   Object<br/>
+*   String<br/>
+*   StringDict<br/>
+*   StringList<br/>
+*   Table<br/>
+*   TableRow<br/>
+*   XML<br/>
+<br/>
+<h3 id="AssignmentvsComparison"><strong>Assignment vs. Comparison</strong></h3>In algebra, is it perfectly reasonable to say that x = 5 and 5 = x. But in programming, the equals symbol isn’t saying that the two values are equal. Instead, it takes the right value and copies it into the left value. That means that saying 5 = x, is changing the value of the number five, which isn’t allowed by the computer.<br/>
+<br/>
+<h3 id="Scope"><strong>Scope</strong></h3>Scope in programming is the idea that in whatever place a variable is declared it can’t be used outside of that area, also known as scope. For example, if we create a variable inside of our draw function, it will not be able to be used anywhere else. Not only this, but it will be destroyed after draw ends. Since draw is called repeatedly, it will just create a new variable every time.<br/>
+<br/>
+<h3 id="CreatingVariables"><strong>Creating Variables</strong></h3>There are many ways to create a variable or multiple variables. You don’t need to put in a value right away. You can also create multiple variables by listing them with commas. You may use any combination of these:<br/>
+<br/>
+Type Name;<br/>
+<br/>
+Type Name, Name, Name;<br/>
+<br/>
+Type Name = Value;<br/>
+<br/>
+<h3 id="AssigningValues"><strong>Assigning Values</strong></h3>Assigning a value to a variable is usually done using the following format. However, we also can change the value of any variable by a certain factor.<br/>
+<br/>
+Name = Value;<br/>
+<br/>
+<h3 id="PredefinedVariables"><strong>Predefined Variables</strong></h3>Processing has some predefined variables that will update automatically as they change. <br/>
+<br/>
+* &emsp;width (width of window)<br/>
+*   height (height of window)<br/>
+*   mouseX (mouse position on x-axis)<br/>
+*   mouseY (mouse position on y-axis)<br/>
+*   frameRate (fps)<br/>
+<br/>
+<h2 id="IfStatements"><strong>If Statements</strong></h2>Checks if a condition is true, and if it is, then executes specified code. Otherwise, it just skips the section.<br/>
+<br/>
+<h3 id="Structure"><strong>Structure</strong></h3><div class="code">if (comparison) <br/>
+{<br/>
+&emsp;code...<br/>
+}</div><br/>
+<br/>
+<h3 id="BooleanOperators"><strong>Boolean Operators</strong></h3>Boolean Operators return a boolean with the input of two values<br/>
+<br/>
+<h2 id="ProjectCode"><strong>Project Code</strong></h2>Here is the code for our project:<br/>
+<br/>
+<div class="code">void setup() { <br/>
+&emsp;size(800, 600);   <br/>
+}<br/>
+<br/>
+void draw() {<br/>
+<br/>
+}</div></div>
   </body>
 </html>
