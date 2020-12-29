@@ -1,121 +1,22 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Test</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-      html, body
-      {
-        padding: 0;
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        position: fixed;
-        overflow: hidden;
-      }
-
-      h2 {
-        margin: 0;
-        padding: 0.25em 0em;
-        font-weight: 500;
-      }
-
-      h3 {
-        margin: 0;
-        padding: 0.25em 0em;
-        font-weight: 500;
-      }
-
-      p {
-        margin: 0;
-        padding: 0;
-      }
-
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 1em;
-        width: calc(25% - 2em);
-        position: fixed;
-        background-color: gray;
-        height: 100%;
-        display:block;
-        overflow-y: scroll;
-      }
-
-      li {
-        display: block;
-      }
-      
-      a {
-        padding: 0.5em;
-        text-decoration: none;
-        color: black;
-        display: block;
-      }
-
-      a:hover, a:focus {
-        background-color: darkgray;
-      }
-
-      .text {
-        width: calc(75% - 2em);
-        float: right;
-        padding: 1em;
-        overflow-y: scroll;
-      }
-
-      .code {
-        width:calc(100% - 2em);
-        padding: 1em;
-        margin: 0 auto;
-        border-radius: 10px;
-        background-color:lightgray;
-        line-height:1.2em;
-      }
-    </style>
-  </head>
-  <body>
-<ul>
-<li><a style="font-size:1.2em;" href="#Syntax"> Syntax</a></li> 
-<li style="margin-left:20px;"><a href="#ControlFlow"> Control Flow</a></li>
-<li style="margin-left:20px;"><a href="#Pseudo-Code"> Pseudo-Code</a></li>
-<li style="margin-left:20px;"><a href="#Statements"> Statements</a></li>
-<li><a style="font-size:1.2em;" href="#Functions"> Functions</a></li> 
-<li style="margin-left:20px;"><a href="#PredefinedFunctions"> Predefined Functions</a></li>
-<li><a style="font-size:1.2em;" href="#Operators"> Operators</a></li> 
-<li style="margin-left:20px;"><a href="#ArithmeticOperators"> Arithmetic Operators</a></li>
-<li><a style="font-size:1.2em;" href="#Variables"> Variables</a></li> 
-<li style="margin-left:20px;"><a href="#DataTypes-Primitives"> Data Types - Primitives</a></li>
-<li style="margin-left:20px;"><a href="#DataTypes-Composite"> Data Types - Composite</a></li>
-<li style="margin-left:20px;"><a href="#AssignmentvsComparison"> Assignment vs Comparison</a></li>
-<li style="margin-left:20px;"><a href="#Scope"> Scope</a></li>
-<li style="margin-left:20px;"><a href="#CreatingVariables"> Creating Variables</a></li>
-<li style="margin-left:20px;"><a href="#AssigningValues"> Assigning Values</a></li>
-<li style="margin-left:20px;"><a href="#PredefinedVariables"> Predefined Variables</a></li>
-<li><a style="font-size:1.2em;" href="#IfStatements"> If Statements</a></li> 
-<li style="margin-left:20px;"><a href="#Structure"> Structure</a></li>
-<li><a style="font-size:1.2em;" href="#ProjectCode"> Project Code</a></li> 
-</ul>
-<div class="text"><h2 id="Syntax">Syntax</h2><br/>
-<h3 id="ControlFlow">Control Flow</h3>A program reads from left to right, then top to bottom (like a book). This is known as control flow. When the program is run a set of instructions is created to determine how it is run. In processing, it is guaranteed that only one instruction will be run at a time. The order may change during runtime due to if statements, loops, or any other runtime decisions.<br/>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div><h2 id="Syntax">Syntax</h2><h3 id="ControlFlow">Control Flow</h3>A program reads from left to right, then top to bottom (like a book). This is known as control flow. When the program is run a set of instructions is created to determine how it is run. In processing, it is guaranteed that only one instruction will be run at a time. The order may change during runtime due to if statements, loops, or any other runtime decisions.<br/>
 <br/>
 <h3 id="Pseudo-Code">Pseudo-Code</h3>Pseudo-Code is instructions that help us to understand what our code does. Large projects can reach thousands of lines of code and with a team, hundreds of thousands. Without comments, it would be very difficult to understand exactly what everything does. When the program runs, pseudo-code is just ignored. Pseudo-code is often simply referred to as comments. To type a comment in processing simply type two slashes<br/>
 <br/>
 <div class="code">//The rest of the line is ignored by the compiler</div><br/>
-<br/>
 We can also type multiline comments using this format.<br/>
 <br/>
 <div class="code">/* <br/>
 Any text in between will be ignored by the compiler too. <br/>
  */</div><br/>
-<br/>
 <h3 id="Statements">Statements</h3>A statement is a complete instruction to the computer. For example, drawing a shape would be a complete instruction. Adding two numbers together isn’t. This will become more clear as syntax is shown, but the importance of understanding this is that a statement must be terminated by a semicolon. <br/>
 <br/>
 <div class="code">statement;</div><br/>
-<br/>
 We can also create compound statements which don’t need to be followed by a semicolon. A compound statement is able to have as many statements as you want, this example only shows two. The syntax for a compound statement is as follows. Keep in mind that the indentation is simply cosmetic and the spaces don’t actually matter here.<br/>
 <br/>
 <div class="code">{<br/>
@@ -124,7 +25,6 @@ We can also create compound statements which don’t need to be followed by a se
 &emsp;statement;<br/>
 <br/>
 }</div><br/>
-<br/>
 <h2 id="Functions">Functions</h2>Functions are tools that allow us to assign a name to a chunk of code. They don’t work this way internally (most of the time), but for all intents and purposes, we can think of them this way. Processing gives us many predefined functions so that we don’t have to worry about the code that is executed when we call them.<br/>
 <br/>
 <h3 id="PredefinedFunctions">Predefined Functions</h3>size(width, height); Set the width and height of the window<br/>
@@ -177,9 +77,7 @@ point(x, y); places a point at (x, y)<br/>
 <br/>
 <h3 id="AssignmentvsComparison">Assignment vs. Comparison</h3>In algebra, is it perfectly reasonable to say that x = 5 and 5 = x. But in programming, the equals symbol isn’t saying that the two values are equal. Instead, it takes the right value and copies it into the left value. That means that saying 5 = x, is changing the value of the number five, which isn’t allowed by the computer.<br/>
 <br/>
-<br/>
 <h3 id="Scope">Scope</h3>Scope in programming is the idea that in whatever place a variable is declared it can’t be used outside of that area, also known as scope. For example, if we create a variable inside of our draw function, it will not be able to be used anywhere else. Not only this, but it will be destroyed after draw ends. Since draw is called repeatedly, it will just create a new variable every time.<br/>
-<br/>
 <br/>
 <h3 id="CreatingVariables">Creating Variables</h3>There are many ways to create a variable or multiple variables. You don’t need to put in a value right away. You can also create multiple variables by listing them with commas. You may use any combination of these:<br/>
 <br/>
@@ -188,16 +86,10 @@ point(x, y); places a point at (x, y)<br/>
 Type Name, Name, Name;<br/>
 <br/>
 Type Name = Value;</div><br/>
-<br/>
-<br/>
 <h3 id="AssigningValues">Assigning Values</h3>Assigning a value to a variable is usually done using the following format. However, we also can change the value of any variable by a certain factor.<br/>
 <br/>
 <div class="code">Name = Value;</div><br/>
-<br/>
-<br/>
 <h3 id="PredefinedVariables">Predefined Variables</h3>Processing has some predefined variables that will update automatically as they change. <br/>
-<br/>
-<br/>
 <br/>
 *   width (width of window)<br/>
 *   height (height of window)<br/>
@@ -208,12 +100,10 @@ Type Name = Value;</div><br/>
 <br/>
 <h2 id="IfStatements">If Statements</h2>Checks if a condition true, and if it is, then executes specified code. Otherwise, it just skips the section.<br/>
 <br/>
-<br/>
 <h3 id="Structure">Structure</h3><div class="code">if (comparison)<br/>
 {<br/>
   code...<br/>
 }</div><br/>
-<br/>
 <br/>
 <h2 id="ProjectCode">Project Code</h2><div class="code">void setup() { <br/>
 &emsp;size(800, 600);<br/>
@@ -222,5 +112,5 @@ Type Name = Value;</div><br/>
 void draw() {<br/>
 <br/>
 }</div></div>
-  </body>
+	</body>
 </html>

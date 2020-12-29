@@ -1,25 +1,17 @@
-NAME=doc
+CXX=clang++
+
+NAME=jdab-builder
 BUILDDIR=bin
 
 SRCFILES=\
-src/DocBuilder/Main.cpp \
-src/DocBuilder/Parser.cpp \
-src/DocBuilder/FileManager.cpp \
-src/DocBuilder/Logger.cpp
-
-
-F2SFILES=\
-src/File2String/f2s.cpp
+src/BlogBuilder/Main.cpp \
+src/BlogBuilder/CommandParser.cpp \
+src/BlogBuilder/FileManager.cpp \
+src/BlogBuilder/Parser.cpp \
+src/BlogBuilder/HTMLBuilder.cpp
 
 .PHONY: build
 
 .SILENT:
 build:
-	clang++ $(SRCFILES) -std=c++17 -o $(BUILDDIR)/$(NAME)
-	rm /usr/local/bin/doc
-	ln ./bin/doc /usr/local/bin/doc
-
-f:
-	clang++ $(F2SFILES) -std=c++17 -o $(BUILDDIR)/f2s
-	rm /usr/local/bin/f2s
-	ln ./bin/f2s /usr/local/bin/f2s
+	$(CXX) $(SRCFILES) -std=c++17 -o $(BUILDDIR)/$(NAME)
